@@ -1,6 +1,126 @@
-.avocadoBody {
-    background-color: 005900;
-    width: 245px;
-    height: 300px;
-    border-radius: 50%;
+body {
+    background-color: rgb(176,224,230);
 }
+
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+p {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+
+
+.avocadoBody {
+    height: 330px;
+    width: 300px;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    
+    
+   
+}
+
+.avocadoFirstLayer {
+    display: block;
+    width: 300px;
+    height: 330px;
+    background-color: 005900;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -25%;
+
+}
+
+.avocadoFirstLayer:before {
+    position: absolute;
+    height: 86%;
+    width: 75%;
+    content: "";
+    background-color: 005900;
+    top: -25%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.avocadoSecondLayer {
+    display: block;
+    width: 280px;
+    height: 320px;
+    background-color: 00FF00;
+    border-radius: 50%;
+    position: absolute;
+    left: 3.5%;
+    bottom: -22%
+}
+
+.avocadoSecondLayer::before {
+    position: absolute;
+    height: 78%;
+    width: 72%;
+    top: -20%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    background-color: 00FF00;
+    content: "";
+}
+
+.avocadoThirdLayer {
+    display: block;
+    width: 260px;
+    height: 310px;
+    background-color: E3E35B;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -20%;
+    left: 6.5%;
+
+}
+
+.avocadoThirdLayer::before{
+    position: absolute;
+    height: 70%;
+    width: 69%;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    content: "";
+    background-color: E3E35B;
+    top: -15%;
+    left: 50%;
+}
+
+.avocadoEyeLeft {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: 333333;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+}
+
+.avocadoEyeRight {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: 333333;
+    position: absolute;
+    left: 60% ;
+    top: 30%;
+}
+
+
+   
+
+
+
+
+     
