@@ -4,6 +4,7 @@ body {
     --green: rgb(50,205,50);
     --lightGreen: rgb(173,255,47);
     --black: rgb(0,0,0);
+    --white: rgb(255,255,255);
 }
 
 h1, p {
@@ -158,7 +159,7 @@ h1, p {
     height: 10px;
     position: absolute;
     border-radius:  50%;
-    background-color: white;
+    background-color: var(--white);
     top: 32%;
     left: 35%;
 }
@@ -168,7 +169,7 @@ h1, p {
     height: 10px;
     position: absolute;
     border-radius:  50%;
-    background-color: white;
+    background-color: var(--white);
     top: 32%;
     left: 65%;
 }
@@ -178,7 +179,7 @@ h1, p {
     height: 5px;
     position: absolute;
     border-radius:  50%;
-    background-color: white;
+    background-color: var(--white);
     top: 35%;
     left: 33%;
 }
@@ -188,7 +189,7 @@ h1, p {
     height: 5px;
     position: absolute;
     border-radius:  50%;
-    background-color: white;
+    background-color: var(--white);
     top: 35%;
     left: 63%;
 
