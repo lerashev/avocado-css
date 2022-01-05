@@ -115,15 +115,31 @@ p {
 
 .avocadoMouth {
     position:absolute;
-    background-color: 333333;
+    width: 30px;
+    height: 17px;
+    top: 50%;
+    left: 40%;
+    
+}
+
+.avocadoMouth::before {
+    content: "";
+    position: absolute;
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
+    width: 60px;
+    height: 29px;
+    border-bottom: 4px solid rgb(0, 0, 0);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    
+  
+    
 }
 
 .avocadoCheekLeft {
-    width: 12px;
-    height: 7px;
+    width: 14px;
+    height: 9px;
     border-radius: 50%;
     background-color: rgb(219,112,147);
     position: absolute;
@@ -132,8 +148,8 @@ p {
 }
 
 .avocadoCheekRight {
-    width: 12px;
-    height: 7px;
+    width: 14px;
+    height: 9px;
     border-radius: 50%;
     background-color: rgb(219,112,147);
     position: absolute;
@@ -159,6 +175,27 @@ p {
     background-color: white;
     top: 32%;
     left: 65%;
+}
+
+.avocadoPupilLeftSmall {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    border-radius:  50%;
+    background-color: white;
+    top: 35%;
+    left: 33%;
+}
+
+.avocadoPupilRightSmall {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    border-radius:  50%;
+    background-color: white;
+    top: 35%;
+    left: 63%;
+
 }
 
 @keyframes swaying {
