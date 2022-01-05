@@ -29,7 +29,7 @@ p {
     display: block;
     width: 300px;
     height: 330px;
-    background-color: 005900;
+    background-color: rgb(0,100,0);
     border-radius: 50%;
     position: absolute;
     bottom: -25%;
@@ -40,7 +40,7 @@ p {
     height: 86%;
     width: 75%;
     content: "";
-    background-color: 005900;
+    background-color: rgb(0,100,0);
     top: -25%;
     left: 50%;
     border-radius: 50%;
@@ -121,6 +121,26 @@ p {
     height: 25px;
 }
 
+.avocadoCheekLeft {
+    width: 12px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: E6D0DE;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}
+
+.avocadoCheekRight {
+    width: 12px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: E6D0DE;
+    position: absolute;
+    top: 40%;
+    left: 65%;
+}
+
 @keyframes swaying {
     0% {
         transform: rorate(20deg);
@@ -136,3 +156,4 @@ p {
 
 
      
+
