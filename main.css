@@ -3,6 +3,7 @@ body {
     --darkGreen: rgb(0,100,0);
     --green: rgb(50,205,50);
     --lightGreen: rgb(173,255,47);
+    --black: rgb(0,0,0);
 }
 
 h1, p {
@@ -94,7 +95,7 @@ h1, p {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #333333;
+    background-color: var(--black);
     position: absolute;
     top: 30%;
     left: 30%;
@@ -105,7 +106,7 @@ h1, p {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #333333;
+    background-color: var(--black);
     position: absolute;
     left: 60% ;
     top: 30%;
@@ -126,7 +127,7 @@ h1, p {
     border-radius: 50%;
     width: 60px;
     height: 22px;
-    border-bottom: 4px solid rgb(0, 0, 0);
+    border-bottom: 4px solid var(--black);
     border-top: none;
     border-right: none;
     border-left: none;
