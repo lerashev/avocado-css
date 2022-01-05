@@ -119,7 +119,6 @@ p {
     height: 17px;
     top: 50%;
     left: 40%;
-    
 }
 
 .avocadoMouth::before {
@@ -132,9 +131,6 @@ p {
     border-top: none;
     border-right: none;
     border-left: none;
-    
-  
-    
 }
 
 .avocadoCheekLeft {
@@ -195,6 +191,16 @@ p {
     background-color: white;
     top: 35%;
     left: 63%;
+
+}
+
+.avocadoSeed {
+    width: 100px;
+    height:  100px;
+    position: absolute;
+    border-radius: 50%;
+   
+    background-color: rgb(139,69,19);
 
 }
 
