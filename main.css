@@ -1,5 +1,6 @@
 body {
     background-color: rgb(176,224,230);
+    --darkGreen: rgb(0,100,0);
 }
 
 h1, p {
@@ -23,7 +24,7 @@ h1, p {
     display: block;
     width: 300px;
     height: 330px;
-    background-color: rgb(0,100,0);
+    background-color: var(--darkGreen);
     border-radius: 50%;
     position: absolute;
     bottom: -25%;
@@ -34,7 +35,7 @@ h1, p {
     height: 86%;
     width: 75%;
     content: "";
-    background-color: rgb(0,100,0);
+    background-color: var(--darkGreen);
     top: -25%;
     left: 50%;
     border-radius: 50%;
