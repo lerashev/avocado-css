@@ -125,7 +125,7 @@ p {
     width: 12px;
     height: 7px;
     border-radius: 50%;
-    background-color: E6D0DE;
+    background-color: rgb(219,112,147);
     position: absolute;
     top: 40%;
     left: 30%;
@@ -135,9 +135,29 @@ p {
     width: 12px;
     height: 7px;
     border-radius: 50%;
-    background-color: E6D0DE;
+    background-color: rgb(219,112,147);
     position: absolute;
     top: 40%;
+    left: 65%;
+}
+
+.avocadoPupilLeftLarge {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius:  50%;
+    background-color: white;
+    top: 32%;
+    left: 35%;
+}
+
+.avocadoPupilRightLarge {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius:  50%;
+    background-color: white;
+    top: 32%;
     left: 65%;
 }
 
