@@ -14,9 +14,14 @@ h1, p {
     font-style: italic;
 }
 
+.avocadoContainer {
+    position: relative;
+    height: 500px;
+    width: 550px;
+}
 
 
-.avocadoBody {
+.avocadoShape {
     height: 330px;
     width: 300px;
     position: absolute;
@@ -101,7 +106,7 @@ h1, p {
     position: absolute;
     top: 30%;
     left: 30%;
-    animation: blinking1 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+    animation: blinking1 5s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
 }
 
 .avocadoEyeRight {
@@ -112,7 +117,7 @@ h1, p {
     position: absolute;
     left: 60% ;
     top: 30%;
-    animation: blinking1 3s cubic-bezier(0.785, 0.135, 0.15, 0.86)  infinite;
+    animation: blinking1 5s cubic-bezier(0.785, 0.135, 0.15, 0.86)  infinite;
 }
 
 .avocadoMouth {
