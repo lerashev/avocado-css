@@ -12,16 +12,13 @@ h1, p {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-style: italic;
-    
 }
 
 .avocadoContainer {
     position: relative;
     width: 100%;
     height: 20%;
-    
 }
-
 
 .avocadoShape {
     width: 300px;
@@ -29,7 +26,7 @@ h1, p {
     position: absolute;
     top: 30%;
     left: 40%;
-    animation: swaying 1.5s infinite ease-in-out alternate-reverse;
+    animation: swaying 1.5s infinite ease-in-out alternate;
 }
 
 .avocadoSkin {
@@ -89,7 +86,7 @@ h1, p {
     background-color: var(--lightGreen);
     border-radius: 50%;
     position: relative;
-    bottom: -20%;
+    bottom: -26%;
     left: 6.5%;
 }
 
