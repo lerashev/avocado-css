@@ -98,26 +98,23 @@ h1, p {
     left: 50%;
 }
 
-.avocadoEyeLeft {
+.avocadoEyes {
+    top: 30%;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: var(--black);
     position: absolute;
-    top: 30%;
-    left: 30%;
     animation: blinking1 5s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+
+}
+.avocadoEyeLeft {
+   left: 30%;
 }
 
 .avocadoEyeRight {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: var(--black);
-    position: absolute;
     left: 60% ;
-    top: 30%;
-    animation: blinking1 5s cubic-bezier(0.785, 0.135, 0.15, 0.86)  infinite;
+   
 }
 
 .avocadoMouth {
