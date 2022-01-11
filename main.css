@@ -14,13 +14,13 @@ h1, p {
     font-style: italic;
 }
 
-.avocadoContainer {
+.avocado-container {
     position: relative;
     width: 100%;
     height: 20%;
 }
 
-.avocadoShape {
+.avocado-shape {
     width: 300px;
     height: 330px;
     position: absolute;
@@ -29,7 +29,7 @@ h1, p {
     animation: swaying 1.5s infinite ease-in-out alternate;
 }
 
-.avocadoSkin {
+.avocado-skin {
     display: block;
     width: 300px;
     height: 330px;
@@ -39,7 +39,7 @@ h1, p {
     bottom: -25%;
 }
 
-.avocadoSkin:before {
+.avocado-skin:before {
     position: absolute;
     width: 75%;
     height: 86%;
@@ -51,7 +51,7 @@ h1, p {
     transform: translateX(-50%);
 }
 
-.avocadoOuter {
+.avocado-outer {
     display: block;
     width: 280px;
     height: 320px;
@@ -62,7 +62,7 @@ h1, p {
     bottom: -22%;
 }
 
-.avocadoOuter::before {
+.avocado-outer::before {
     position: absolute;
     height: 78%;
     width: 72%;
@@ -74,7 +74,7 @@ h1, p {
     content: "";
 }
 
-.avocadoInner {
+.avocado-inner {
     --headTopOffset: -15%;
     --topOffset: 45%;
     --eyesTopOffset: 40%;
@@ -90,7 +90,7 @@ h1, p {
     left: 6.5%;
 }
 
-.avocadoInner::before{
+.avocado-inner::before{
     position: absolute;
     height: 70%;
     width: 69%;
@@ -102,7 +102,7 @@ h1, p {
     left: 50%;
 }
 
-.avocadoEyes {
+.avocado-eyes {
     top: calc( var(--headTopOffset) + 15% );
     width: 30px;
     height: 30px;
@@ -112,16 +112,15 @@ h1, p {
     animation: blinking1 5s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
 
 }
-.avocadoEyeLeft {
+.avocado-eye-left {
    left: 30%;
 }
 
-.avocadoEyeRight {
+.avocado-eye-right {
     left: 60% ;
-   
 }
 
-.avocadoMouth {
+.avocado-mouth {
     position:absolute;
     width: 30px;
     height: 10px;
@@ -129,7 +128,7 @@ h1, p {
     left: 40%;
 }
 
-.avocadoMouth::before {
+.avocado-mouth::before {
     content: "";
     position: absolute;
     border-radius: 50%;
@@ -141,41 +140,41 @@ h1, p {
     border-left: none;
 }
 
-.avocadoCheeks {
+.avocado-cheeks {
     top: calc(var(--eyesTopOffset) - 28%);
     width: 16px;
     height: 11px;
     border-radius: 50%;
     background-color: var(--pink);
     position: absolute;
-    
 }
-.avocadoCheekLeft {
+
+.avocado-cheek-left {
     left: 30%;
 }
 
-.avocadoCheekRight {
+.avocado-cheek-right {
     left: 65%;
 }
 
-.avocadoPupils {
+.avocado-pupils {
     top: calc(var(--pupilsTopOffset) - 15%);
-    width: 10px;
-    height: 10px;
+    width: 33%;
+    aspect-ratio: 1;
     position: absolute;
     border-radius:  50%;
     background-color: var(--white);
 }
 
-.avocadoPupilLeftLarge {
+.avocado-pupil-left-large {
     left: 50%;
 }
 
-.avocadoPupilRightLarge {
-    left: 57%;
+.avocado-pupil-right-large {
+    left: 50%;
 }
 
-.avocadoPupilLeftSmall {
+.avocado-pupil-left-small {
     width: 5px;
     height: 5px;
     position: absolute;
@@ -185,7 +184,7 @@ h1, p {
     left: 33%;
 }
 
-.avocadoPupilRightSmall {
+.avocado-pupil-right-small {
     width: 5px;
     height: 5px;
     position: absolute;
@@ -193,28 +192,27 @@ h1, p {
     background-color: var(--white);
     top: 39%;
     left: 40%;
-
 }
 
-.avocadoSeed {
+.avocado-seed {
+    --seed-width: 50%;
     display: flex;
-    width: 150px;
-    height: 150px;
+    width: var(--seed-width);
+    aspect-ratio: 1;
     position: absolute;
     border-radius: 100%;
     background-color: rgb(139,69,19);
-    top: calc(var(--seedTopOffset) - 30%);
-    left: 23%;
+    top: 40%;
+    left: calc(50% - var(--seed-width) / 2);
     justify-content: center;
     align-items: center;
 }
 
-.avocadoSeedInside {
-    width: var(--size);
-    height: var(--size);
+.avocado-seed-inside {
+    width: 84%;
+    aspect-ratio: 1;
     border-radius: 100%;
     background-color: rgb(168, 115, 90);
-    --size: 84%
 }
 
 
@@ -222,7 +220,6 @@ h1, p {
     0% {
         transform: rorate(20deg);
     }
-
     100% {
         transform: rotate(-12deg);
     }
