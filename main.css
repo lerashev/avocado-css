@@ -10,7 +10,7 @@ body {
 
 h1, p {
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Courier, monospace;
     font-style: italic;
 }
 
@@ -123,6 +123,43 @@ h1, p {
     left: var(--righteyeOffset);
 }
 
+.avocado-pupils {
+    top: var(--pupilsLargeOffset);
+    width: 33%;
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius:  50%;
+    background-color: var(--white);
+}
+
+.avocado-pupil-left-large {
+    left: 50%;
+}
+
+.avocado-pupil-right-large {
+    left: 50%;
+}
+
+.avocado-pupil-left-small {
+    width: 15%;
+    height: 15%;
+    position: absolute;
+    border-radius:  50%;
+    background-color: var(--white);
+    top: var(--pupilsSmallTopOffset);
+    left: var(--pupilsSmallSideOffset);
+}
+
+.avocado-pupil-right-small {
+    width: 15%;
+    height: 15%;
+    position: absolute;
+    border-radius:  50%;
+    background-color: var(--white);
+    top: var(--pupilsSmallTopOffset);
+    left: var(--pupilsSmallSideOffset);
+}
+
 .avocado-mouth {
     --mouth-width: 14%;
     display: flex;
@@ -164,43 +201,6 @@ h1, p {
 
 .avocado-cheek-right {
     left: var(--rightcheekOffset);
-}
-
-.avocado-pupils {
-    top: var(--pupilsLargeOffset);
-    width: 33%;
-    aspect-ratio: 1;
-    position: absolute;
-    border-radius:  50%;
-    background-color: var(--white);
-}
-
-.avocado-pupil-left-large {
-    left: 50%;
-}
-
-.avocado-pupil-right-large {
-    left: 50%;
-}
-
-.avocado-pupil-left-small {
-    width: 15%;
-    height: 15%;
-    position: absolute;
-    border-radius:  50%;
-    background-color: var(--white);
-    top: var(--pupilsSmallTopOffset);
-    left: var(--pupilsSmallSideOffset);
-}
-
-.avocado-pupil-right-small {
-    width: 15%;
-    height: 15%;
-    position: absolute;
-    border-radius:  50%;
-    background-color: var(--white);
-    top: var(--pupilsSmallTopOffset);
-    left: var(--leftpupilsOffset);
 }
 
 .avocado-seed {
