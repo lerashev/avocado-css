@@ -77,7 +77,6 @@ h1, p {
 .avocado-inner {
     --headTopOffset: -15%;
     --topOffset: 45%;
-    --eyesTopOffset: 40%;
     --pupilsTopOffset: 32%;
     --seedTopOffset: 65%;
     display: block;
@@ -103,9 +102,9 @@ h1, p {
 }
 
 .avocado-eyes {
-    top: calc( var(--headTopOffset) + 15% );
-    width: 30px;
-    height: 30px;
+    top: 40%;
+    width: 12%;
+    aspect-ratio: 1;
     border-radius: 50%;
     background-color: var(--black);
     position: absolute;
@@ -121,19 +120,25 @@ h1, p {
 }
 
 .avocado-mouth {
-    position:absolute;
-    width: 30px;
-    height: 10px;
-    top: calc(var(--topOffset) - 25%);
-    left: 40%;
+    --mouth-width: 14%;
+    display: flex;
+    position: absolute;
+    width: var(--mouth-width);
+    aspect-ratio: 1;
+    justify-content: center;
+    align-items: center;
+    top: 20%;
+    left: calc(50% - var(--mouth-width) / 2);
 }
+
+
 
 .avocado-mouth::before {
     content: "";
     position: absolute;
     border-radius: 50%;
-    width: 60px;
-    height: 22px;
+    width: 150%;
+    height: 100%;
     border-bottom: 4px solid var(--black);
     border-top: none;
     border-right: none;
