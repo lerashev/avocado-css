@@ -76,9 +76,8 @@ h1, p {
 
 .avocado-inner {
     --headTopOffset: -15%;
-    --topOffset: 45%;
-    --pupilsTopOffset: 32%;
-    --seedTopOffset: 65%;
+    --eyesTopOffset: 2%;
+    --cheekTopOffset: 15%;
     display: block;
     width: 260px;
     height: 310px;
@@ -102,21 +101,26 @@ h1, p {
 }
 
 .avocado-eyes {
-    top: 40%;
+    --lefteyeOffset: 30%;
+    --righteyeOffset: 60%;
+    --pupilsLargeOffset: 15%;
+    --pupilsSmallTopOffset: 40%;
+    --pupilsSmallSideOffset: 35%;
+    top: var(--eyesTopOffset);
     width: 12%;
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: var(--black);
     position: absolute;
-    animation: blinking1 5s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+    animation: blinking 5s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
 
 }
 .avocado-eye-left {
-   left: 30%;
+   left: var(--lefteyeOffset);
 }
 
 .avocado-eye-right {
-    left: 60% ;
+    left: var(--righteyeOffset);
 }
 
 .avocado-mouth {
@@ -131,8 +135,6 @@ h1, p {
     left: calc(50% - var(--mouth-width) / 2);
 }
 
-
-
 .avocado-mouth::before {
     content: "";
     position: absolute;
@@ -146,24 +148,26 @@ h1, p {
 }
 
 .avocado-cheeks {
-    top: calc(var(--eyesTopOffset) - 28%);
-    width: 16px;
-    height: 11px;
+    --leftcheekOffset: 30%;
+    --rightcheekOffset: 65%;
+    top: var(--cheekTopOffset);
+    width: 7%;
+    aspect-ratio: 1.5;
     border-radius: 50%;
     background-color: var(--pink);
     position: absolute;
 }
 
 .avocado-cheek-left {
-    left: 30%;
+    left: var(--leftcheekOffset);
 }
 
 .avocado-cheek-right {
-    left: 65%;
+    left: var(--rightcheekOffset);
 }
 
 .avocado-pupils {
-    top: calc(var(--pupilsTopOffset) - 15%);
+    top: var(--pupilsLargeOffset);
     width: 33%;
     aspect-ratio: 1;
     position: absolute;
@@ -180,23 +184,23 @@ h1, p {
 }
 
 .avocado-pupil-left-small {
-    width: 5px;
-    height: 5px;
+    width: 15%;
+    height: 15%;
     position: absolute;
     border-radius:  50%;
     background-color: var(--white);
-    top: 38%;
-    left: 33%;
+    top: var(--pupilsSmallTopOffset);
+    left: var(--pupilsSmallSideOffset);
 }
 
 .avocado-pupil-right-small {
-    width: 5px;
-    height: 5px;
+    width: 15%;
+    height: 15%;
     position: absolute;
     border-radius:  50%;
     background-color: var(--white);
-    top: 39%;
-    left: 40%;
+    top: var(--pupilsSmallTopOffset);
+    left: var(--leftpupilsOffset);
 }
 
 .avocado-seed {
@@ -230,7 +234,7 @@ h1, p {
     }
 }
 
-@keyframes blinking1 {
+@keyframes blinking {
     0%, 8% {
         height: 30px;
     }
