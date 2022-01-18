@@ -1,5 +1,16 @@
+@font-face {
+    font-family: "Tuffy";
+    src: url(/fonts/Tuffy-Regular.ttf) format("truetype");
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
 body {
-    background-color: rgb(176,224,230);
+    background-image: url(https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700440902.jpg);
+    font-family: Tuffy;
     --darkGreen: rgb(0,100,0);
     --green: rgb(50,205,50);
     --lightGreen: rgb(173,255,47);
@@ -8,41 +19,75 @@ body {
     --pink: rgb(219,112,147);
 }
 
-h1, p {
-    text-align: center;
-    font-family: Courier, monospace;
-    font-style: italic;
+#main-container{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-auto-flow: column;
+}
+
+#sections-container{
+}
+
+#header {
+    display: block;
+    grid-column: 1 / end;
+    font-weight: bold;
+    font-size: 3em;
+    margin-left: 1em;
+}
+
+.section {
+    --padding: 1em;
+    --margin-x: 1em;
+    --max-width: calc(100% - 2 * var(--padding) - var(--margin-x));
+    width: min(var(--max-width), 600px);
+    padding: var(--padding);
+    margin-right: var(--margin-x);
+    margin-bottom: min(1.5vw, 1em);
+    border-radius: 10px;
+    background-color: rgba(64, 137, 190, 0.28);
+}
+
+.section-header {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+}
+
+.section-description {
+    display: block;
+    font-size: 0.8em;
+    line-height: 1.3;
 }
 
 .avocado-container {
     position: relative;
-    width: 100%;
-    height: 20%;
+    width: 30vw;
+    aspect-ratio: 1;
 }
 
 .avocado-shape {
-    width: 50%;
-    height: 225%;
+    width: 69%;
+    aspect-ratio: 0.75;
     position: absolute;
-    top: 30%;
-    left: 40%;
     animation: swaying 1.5s infinite ease-in-out alternate;
 }
 
 .avocado-skin {
     display: block;
-    width: 85%;
-    height: 100%;
+    width: 100%;
+    height: 78%;
     background-color: var(--darkGreen);
     border-radius: 50%;
     position: absolute;
-    bottom: -25%;
+    bottom: 2%;
 }
 
 .avocado-skin:before {
     position: absolute;
-    width: 75%;
-    height: 86%;
+    width: 70%;
+    height: 85%;
     content: "";
     background-color: var(--darkGreen);
     top: -25%;
@@ -53,19 +98,19 @@ h1, p {
 
 .avocado-outer {
     display: block;
-    width: 78%;
-    height: 98%;
+    width: 88%;
+    height: 75%;
     background-color: var(--green);
     border-radius: 50%;
     position: absolute;
-    left: 3.5%;
-    bottom: -22%;
+    left: 6%;
+    bottom: 5%;
 }
 
 .avocado-outer::before {
     position: absolute;
-    height: 78%;
-    width: 72%;
+    height: 85%;
+    width: 70%;
     top: -20%;
     left: 50%;
     border-radius: 50%;
@@ -78,20 +123,22 @@ h1, p {
     --headTopOffset: -15%;
     --eyesTopOffset: 2%;
     --cheekTopOffset: 15%;
+    --lefteyeOffset: 30%;
+    --righteyeOffset: 60%;
     display: block;
-    width: 70%;
-    height: 94%;
+    width: 72%;
+    height: 70%;
     background-color: var(--lightGreen);
     border-radius: 50%;
     position: relative;
-    bottom: -25%;
-    left: 7.5%;
+    bottom: -20%;
+    left: 14.5%;
 }
 
 .avocado-inner::before{
     position: absolute;
-    height: 70%;
-    width: 69%;
+    height: 95%;
+    width: 76%;
     border-radius: 50%;
     transform: translateX(-50%);
     content: "";
@@ -101,8 +148,6 @@ h1, p {
 }
 
 .avocado-eyes {
-    --lefteyeOffset: 30%;
-    --righteyeOffset: 60%;
     --pupilsLargeOffset: 15%;
     --pupilsSmallTopOffset: 40%;
     --pupilsSmallSideOffset: 35%;
@@ -142,7 +187,7 @@ h1, p {
 
 .avocado-pupil-left-small {
     width: 15%;
-    height: 15%;
+    aspect-ratio: 1;
     position: absolute;
     border-radius:  50%;
     background-color: var(--white);
@@ -152,7 +197,7 @@ h1, p {
 
 .avocado-pupil-right-small {
     width: 15%;
-    height: 15%;
+    aspect-ratio: 1;
     position: absolute;
     border-radius:  50%;
     background-color: var(--white);
@@ -225,6 +270,7 @@ h1, p {
 }
 
 
+
 @keyframes swaying {
     0% {
         transform: rorate(20deg);
@@ -245,10 +291,22 @@ h1, p {
         height: 30px;
     }
 }
-   
 
-
-
-
-     
-
+@media screen and (max-width: 600px){   
+    #main-container {
+        grid-template-columns: unset;
+        grid-auto-flow: unset;
+    }
+    .section {
+        --margin-x: 1em;
+        --margin-side: calc(var(--margin-x) / 2);
+        margin-right: var(--margin-side);
+        margin-left: var(--margin-side);
+    }
+    #header {
+        margin: auto;
+    }
+    .avocado-container {
+        margin: auto;
+    }
+}
