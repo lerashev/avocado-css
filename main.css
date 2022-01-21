@@ -1,8 +1,7 @@
 @font-face {
-    font-family: "Tuffy";
-    src: url(/fonts/Tuffy-Regular.ttf) format("truetype");
+    font-family: "Raleway";
+    src: url(fonts/raleway.medium.ttf) format("truetype");
 }
-
 html, body {
     padding: 0;
     margin: 0;
@@ -10,40 +9,46 @@ html, body {
 
 body {
     background-image: url(https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700440902.jpg);
-    font-family: Tuffy;
-    --darkGreen: rgb(0,100,0);
-    --green: rgb(50,205,50);
-    --lightGreen: rgb(173,255,47);
+    font-family: Raleway;
+    --darkGreen: rgb(0,128,0);
+    --green: rgb(117, 179, 24);
+    --lightGreen: rgb(157, 206, 79);
     --black: rgb(0,0,0);
     --white: rgb(255,255,255);
-    --pink: rgb(219,112,147);
+    --pink: rgb(199, 149, 165);
+    background-size: cover;
 }
 
 #main-container{
+    --padding: 1em;
+    --margin-x: 1em;
+    --max-width: calc(100% - 2 * var(--padding) - var(--margin-x));
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto;
-    grid-auto-flow: column;
+    row-gap: 2em;
+    margin-top: 1em;
 }
 
 #sections-container{
 }
 
 #header {
+    width: min(var(--max-width), 600px);
     display: block;
-    grid-column: 1 / end;
+    grid-column: 2 / end;
     font-weight: bold;
     font-size: 3em;
-    margin-left: 1em;
+    mix-blend-mode: multiply;
+}
+
+img {
+    width: 100%;
 }
 
 .section {
-    --padding: 1em;
-    --margin-x: 1em;
-    --max-width: calc(100% - 2 * var(--padding) - var(--margin-x));
     width: min(var(--max-width), 600px);
     padding: var(--padding);
-    margin-right: var(--margin-x);
     margin-bottom: min(1.5vw, 1em);
     border-radius: 10px;
     background-color: rgba(64, 137, 190, 0.28);
@@ -57,14 +62,22 @@ body {
 
 .section-description {
     display: block;
-    font-size: 0.8em;
+    font-size: 0.9em;
     line-height: 1.3;
+}
+
+a {
+    color: rgb(3, 65, 3);
+    text-decoration: none;
 }
 
 .avocado-container {
     position: relative;
     width: 30vw;
     aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .avocado-shape {
@@ -151,9 +164,11 @@ body {
     --pupilsLargeOffset: 15%;
     --pupilsSmallTopOffset: 40%;
     --pupilsSmallSideOffset: 35%;
+    --eye-w: 12%;
+    --eye-h: 10%;
     top: var(--eyesTopOffset);
-    width: 12%;
-    aspect-ratio: 1;
+    height: var(--eye-h);
+    width: var(--eye-w);
     border-radius: 50%;
     background-color: var(--black);
     position: absolute;
@@ -169,11 +184,13 @@ body {
 }
 
 .avocado-pupils {
+    --pupil-h: 25%;
+    --pupi-w: 30%;
     top: var(--pupilsLargeOffset);
-    width: 33%;
-    aspect-ratio: 1;
+    height: var(--pupil-h);
+    width: var(--pupi-w);
     position: absolute;
-    border-radius:  50%;
+    border-radius: 50%;
     background-color: var(--white);
 }
 
@@ -186,7 +203,7 @@ body {
 }
 
 .avocado-pupil-left-small {
-    width: 15%;
+    width: 14%;
     aspect-ratio: 1;
     position: absolute;
     border-radius:  50%;
@@ -196,7 +213,7 @@ body {
 }
 
 .avocado-pupil-right-small {
-    width: 15%;
+    width: 14%;
     aspect-ratio: 1;
     position: absolute;
     border-radius:  50%;
@@ -255,7 +272,7 @@ body {
     aspect-ratio: 1;
     position: absolute;
     border-radius: 100%;
-    background-color: rgb(139,69,19);
+    background-color: rgb(107, 75, 52);
     top: 40%;
     left: calc(50% - var(--seed-width) / 2);
     justify-content: center;
@@ -266,7 +283,7 @@ body {
     width: 84%;
     aspect-ratio: 1;
     border-radius: 100%;
-    background-color: rgb(168, 115, 90);
+    background-color: rgb(124, 85, 67);
 }
 
 
@@ -282,13 +299,13 @@ body {
 
 @keyframes blinking {
     0%, 8% {
-        height: 30px;
+        height: var(--eye-h);
     }
     10%, 12% {
         height: 5px;
     }
     14%, 100% {
-        height: 30px;
+        height: var(--eye-h);
     }
 }
 
@@ -296,6 +313,8 @@ body {
     #main-container {
         grid-template-columns: unset;
         grid-auto-flow: unset;
+        display: contents;
+
     }
     .section {
         --margin-x: 1em;
