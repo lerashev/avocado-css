@@ -12,6 +12,7 @@ body {
     --white: rgb(255,255,255);
     --pink: rgb(199, 149, 165);
     background-size: cover;
+    overflow: hidden;
 }
 
 .avocado-container {
