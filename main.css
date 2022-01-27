@@ -12,10 +12,14 @@ body {
     --white: rgb(255,255,255);
     --pink: rgb(199, 149, 165);
     background-size: cover;
+    overflow: hidden;
 }
 
 .avocado-container {
     position: relative;
+    width: 30vw;
+    aspect-ratio: 1 / 1;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,9 +29,9 @@ body {
 }
 
 .avocado-shape {
-    width: 42vw;
+    width: 69%;
     aspect-ratio: 0.75;
-    position: fixed;
+    position: absolute;
     animation: swaying 1.5s infinite ease-in-out alternate;
 }
 
