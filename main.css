@@ -16,9 +16,6 @@ body {
 
 .avocado-container {
     position: relative;
-    width: 30vw;
-    aspect-ratio: 1 / 1;
-    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,9 +25,9 @@ body {
 }
 
 .avocado-shape {
-    width: 69%;
+    width: 42vw;
     aspect-ratio: 0.75;
-    position: absolute;
+    position: fixed;
     animation: swaying 1.5s infinite ease-in-out alternate;
 }
 
